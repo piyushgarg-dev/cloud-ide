@@ -5,6 +5,8 @@ import FileTree from "./components/tree";
 import socket from "./socket";
 import AceEditor from "react-ace";
 
+import { getFileMode } from "./utils/getFileMode";
+
 import "ace-builds/src-noconflict/mode-javascript";
 import "ace-builds/src-noconflict/theme-github";
 import "ace-builds/src-noconflict/ext-language_tools";
@@ -85,7 +87,8 @@ function App() {
             </p>
           )}
           <AceEditor
-            mode={getFileMode()}
+            width="100%"
+            mode={getFileMode({ selectedFile })}
             value={code}
             onChange={(e) => setCode(e)}
           />

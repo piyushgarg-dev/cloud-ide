@@ -10,6 +10,11 @@
 
 .files {
   padding: 20px;
+  width: 10vw;
+}
+
+.editor {
+  width: 90vw;
 }
 
 .file-node {
