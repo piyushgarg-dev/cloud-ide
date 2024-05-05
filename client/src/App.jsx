@@ -84,7 +84,11 @@ function App() {
               {isSaved ? "Saved" : "Unsaved"}
             </p>
           )}
-          <AceEditor value={code} onChange={(e) => setCode(e)} />
+          <AceEditor
+            mode={getFileMode()}
+            value={code}
+            onChange={(e) => setCode(e)}
+          />
         </div>
       </div>
       <div className="terminal-container">
