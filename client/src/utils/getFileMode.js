@@ -1,5 +1,7 @@
 export const getFileMode = ({ selectedFile }) => {
-  const extension = selectedFile.split(".").reverse()[0];
+  const splitedArray = selectedFile.split(".");
+  
+  const extension = splitedArray[splitedArray.length - 1];
 
   switch (extension) {
     case "js":
